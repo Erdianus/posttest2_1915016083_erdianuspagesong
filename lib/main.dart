@@ -26,51 +26,63 @@ class LayoutBarbershop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          children: [
-            Center(
-              child: Container(
-                margin: EdgeInsets.only(top: 100),
-                child: Text(
-                  "WELCOME TO BARBERSHOP",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Colors.white60, Colors.black87],
+            ),
+          ),
+          child: Column(
+            children: [
+              Container(
+                child: Text("ERDIANUS PAGESONG"),
+              ),
+              Center(
+                child: Container(
+                  margin: EdgeInsets.only(top: 100),
+                  child: Text(
+                    "WELCOME TO BARBERSHOP",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Container(
-              width: 300,
-              height: 300,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/logo_barbershop.png"),
-                ),
-              ),
-            ),
-            Container(
-              width: 150,
-              height: 50,
-              child: Center(
-                child: Text(
-                  'Order Now',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.red,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black,
-                    offset: Offset(3, 6),
-                    blurRadius: 10,
+              Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/logo_barbershop.png"),
                   ),
-                ],
+                ),
               ),
-            )
-          ],
+              Container(
+                width: 150,
+                height: 50,
+                child: Center(
+                  child: Text(
+                    'Order Now',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.red,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black,
+                      offset: Offset(3, 6),
+                      blurRadius: 10,
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
